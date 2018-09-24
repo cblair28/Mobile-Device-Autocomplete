@@ -1,6 +1,7 @@
 MOBILE DEVICE KEYBOARD AUTOCOMPLETE
 
 Corbett Blair
+
 cblair28@terpmail.umd.edu
 
 This project is an autocomplete program for a mobile device keyboard.
@@ -30,5 +31,7 @@ I've provided an example, where I put the sample input and output. The input/out
 train("The third thing that I need to tell you is that this thing does not think thoroughly.")
 
 getWords("thi") --> [thing (2), think (1), third (1), this (1)]
+
 getWords("nee") --> [need (1)]
+
 getWords("th")  --> [that (2), thing (2), the (1), think (1), third (1), this (1), thoroughly (1)]
