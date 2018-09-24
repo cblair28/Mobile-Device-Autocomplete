@@ -40,8 +40,9 @@ I've included a junit test file where I made sure the program can be trained mul
 the sample input/output works, and it handles large blocks of text with punctuation + capitalization.
 
 Because this needs to work fast, here is a short analysis of the time complexity of the program:
+
 Training with a block of text iterates through all the words and enters them into a TreeMap, which
-is back by a red/black tree, so that would be O(nlog(n)). 
+is backed by a red/black tree, resulting in an O(nlog(n)) complexity. 
 
 For the getWords function, creating the submap is O(1), iterating through the elements and putting them
 into a list is O(n), and sorting them in the list is O(nlog(n)). So, the entire operation takes 
