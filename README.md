@@ -24,7 +24,7 @@ CandIntComparator is a comparator that is used to order the getWord list. It lis
 objects from highest confidence to lowest confidence. If the confidence is the same, it orders
 them asciibetically (according to ascending ascii value).
 
-Finally, AutocompleteMain is the main method to test the classes. To compile/run this code,
+Finally, AutocompleteMain is a main method to run the program. To compile/run this code,
 declare a new AutocompleteProvider in the main method, then use the train and getWords methods.
 I've provided an example, where I put the sample input and output. The input/output is:
 
@@ -35,3 +35,22 @@ getWords("thi") --> [thing (2), think (1), third (1), this (1)]
 getWords("nee") --> [need (1)]
 
 getWords("th")  --> [that (2), thing (2), the (1), think (1), third (1), this (1), thoroughly (1)]
+
+I've included a junit test file where I made sure the program can be trained multiple times and update,
+the sample input/output works, and it handles large blocks of text with punctuation + capitalization.
+
+Because this needs to work fast, here is a short analysis of the time complexity of the program:
+Training with a block of text iterates through all the words and enters them into a TreeMap, which
+is back by a red/black tree, so that would be O(nlog(n)). 
+
+For the getWords function, creating the submap is O(1), iterating through the elements and putting them
+into a list is O(n), and sorting them in the list is O(nlog(n)). So, the entire operation takes 
+O(nlog(n)) + O(n) + O(1), which simplifies to O(nlog(n)) as well.
+
+
+
+
+
+
+
+
