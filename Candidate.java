@@ -22,7 +22,7 @@ public class Candidate {
 		this.confidence = c.confidence;
 	}
 	
-	//Called 
+	//Called every time word is encountered
 	public void updateConfidence() {
 		confidence += 1;
 	}

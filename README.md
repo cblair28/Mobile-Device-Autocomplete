@@ -3,7 +3,10 @@ MOBILE DEVICE KEYBOARD AUTOCOMPLETE
 Corbett Blair
 cblair28@terpmail.umd.edu
 
-This is the code for the mobile keyboard autocorrect coding challenge.
+This project is an autocomplete program for a mobile device keyboard.
+It learns as the user types, and returns a list of suggested words
+if the user enters a word fragment, outputting words with a
+higher confidence (most likely match) first.
 
 It has four classes:
 AutocompleteProvider contains the backing map that stores all seen words in a TreeMap.
@@ -22,7 +25,7 @@ them asciibetically (according to ascending ascii value).
 
 Finally, AutocompleteMain is the main method to test the classes. To compile/run this code,
 declare a new AutocompleteProvider in the main method, then use the train and getWords methods.
-I've provided an example, where I put the example input and output. The input/output is:
+I've provided an example, where I put the sample input and output. The input/output is:
 
 train("The third thing that I need to tell you is that this thing does not think thoroughly.")
 
